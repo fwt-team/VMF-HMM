@@ -1,4 +1,4 @@
-# code
+# Code for the VMF-HMM
 ---
 
 ### File
