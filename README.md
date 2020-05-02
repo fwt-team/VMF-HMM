@@ -25,7 +25,7 @@ __params:__
 -verbose print information or not  
 
 -N the number of state  
--K the number of mixture
+-K the number of mixture  
 -converge the over threshold of runing  
 -max_iter max iterations of training  
 
