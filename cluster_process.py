@@ -62,13 +62,10 @@ class ClusterProcess(MultiPCA):
         self.train_data = data / np.linalg.norm(data, axis=1, keepdims=True)
         # self.train_data = (data - np.min(data, axis=1, keepdims=True)) / \
         #                   (np.max(data, axis=1) - np.min(data, axis=1))[:, np.newaxis]
-        # scio.savemat('./datas/brain/adhd/test_sb3.mat', {'data': self.train_data})
 
         data = self.train_data[np.random.randint(0, data.shape[0], 10000), :]
-        # scio.savemat('./datas/brain/adhd/train_sb3.mat', {'data': data})
 
-        # self.model = self.model_.fit(data)
-        # scio.savemat('./datas/brain/adhd/train_phi.mat', {'prior_': self.model.weights_, 'mu_': self.model.means_, 'Sigma_': self.model.covariances_})
+        self.model = self.model_.fit(data)
 
         return self
 

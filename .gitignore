@@ -2,6 +2,3 @@ __pycache__*
 .idea/
 .DS_Store
 nilearn_cache
-datas/
-
-results/brain

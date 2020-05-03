@@ -11,12 +11,12 @@ train # training code
 
 ---
 ### Requirements
-matplotlib  
-numpy  
-pandas  
-scipy  
-sklearn  
-nilearn  
+matplotlib==3.2.1  
+numpy==1.18.2  
+pandas==1.0.3  
+scipy==1.4.1  
+sklearn==0.22.2  
+nilearn==0.6.2  
 
 ---
 ### Run code

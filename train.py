@@ -81,31 +81,9 @@ if __name__ == "__main__":
         # pred, ita = cp.model.predict(cp.train_data)
         # ita = ita.reshape((args.N * args.K, -1))
 
-        # ita = np.exp(cp.model._estimate_weighted_log_prob(cp.train_data))
-        # ita = (ita / np.sum(ita, axis=1, keepdims=True)).T
-        # pred = np.argmax(ita.T, axis=1)
-
-        # pred = cp.model.predict(cp.train_data)
-
-        # scio.savemat('./datas/brain/adhd/pred/test_hmm_vmf_sb1.mat', {'pred': pred, 'result': ita})
-        # vmfs = np.array([23,33,40,20,17,36,12]) - 1
-        # gmms = np.array([3,4,8,9,18,28,38]) - 1
-        # cut_coords = np.array([
-        #     [57, -5, 28],
-        #     [1, -84, 28],
-        #     [1, -60, -48],
-        #     [-36, 0, -30],
-        #     [0, -38, -52],
-        #     [-1, 32, -12],
-        #     [1, -53, 28],
-        # ])
-        pre_data = scio.loadmat('./datas/brain/adhd/pred/test_hmm_gmm.mat')
+        pre_data = scio.loadmat('./datas/brain/adhd/pred/test_hmm_vmf.mat')
         pred = pre_data['pred'].reshape(-1)
-        # ita = pre_data['result'][vmfs]
-        # ita[ita > 0.25] = 0
-        #
-        cp.plot_pro(ita, save=False, item_file='var', name='vmf', choose=vmfs, cut_coords=cut_coords)
-        cp.plot_all(pred, save=False, item_file='sub1', name='vmf')
+        cp.plot_all(pred, save=False, item_file='group', name='vmf')
 
         ca = np.unique(pred)
         print(ca)
