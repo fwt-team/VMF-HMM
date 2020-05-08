@@ -11,7 +11,6 @@
 try:
     import argparse
     import numpy as np
-    import torch
     import pandas as pd
 
     from scipy import io as scio
