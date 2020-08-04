@@ -1,10 +1,10 @@
-# Code for the VMF-HMM
+# Code for the 'Sequentially spherical data modeling with hidden Markov models and its application to fMRI data analysis'
 ---
 
 ### File
 datas  # container of data  
-results # container figure of syn dataset and experimental results  
-config # the hyper parameters of dataset  
+results # experimental results  
+config # the hyper parameters of experiments  
 model # model code  
 utils # some util function  
 train # training code  
@@ -31,3 +31,16 @@ __params:__
 
 __example:__  
 python train.py -data_name small_data -verbose 1 -N 2 -K 2 -converge 1+1e-4 -max_iter 100
+
+---
+### Reference
+If you use our code in your work, please cite our paper. 
+
+    @article{FAN2020106341,
+    title = "Sequentially spherical data modeling with hidden Markov models and its application to fMRI data analysis",
+    author = "Wentao Fan and Lin Yang and Nizar Bouguila and Yewang Chen",
+    journal = "Knowledge-Based Systems",
+    volume = "206",
+    pages = "106341",
+    year = "2020"
+    }
